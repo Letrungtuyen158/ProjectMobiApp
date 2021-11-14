@@ -3,22 +3,22 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "./Components/Homescreen";
 import ViewAllScreen from "./Components/ViewAllScreen";
-import EditScreen from "./Components/EditScreen";
-import Search from "./Components/Search";
-
-const Stack = createStackNavigator();
+import Notification from "./Components/Notification";
+const TL = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <TL.Navigator>
+        <TL.Screen name="HomeScreen" component={HomeScreen} />
 
-        <Stack.Screen name="ViewAllScreen" component={ViewAllScreen} />
+        <TL.Screen name="ViewAllScreen" component={ViewAllScreen} />
+        <TL.Screen name="Notification" component={Notification} />
 
-        <Stack.Screen name="EditScreen" component={EditScreen} />
-        <Stack.Screen name="Search" component={Search} />
-      </Stack.Navigator>
+
+
+
+      </TL.Navigator>
     </NavigationContainer>
   );
 }

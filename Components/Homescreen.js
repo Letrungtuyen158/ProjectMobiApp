@@ -90,9 +90,10 @@ function HomeScreen({ navigation }) {
   const navigateToViewScreen = () => {
     navigation.navigate("ViewAllScreen");
   };
-  const navigateToSearch = () => {
-    navigation.navigate("Search");
+  const navigateToNotification = () => {
+    navigation.navigate("Notification");
   };
+ 
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -161,10 +162,12 @@ function HomeScreen({ navigation }) {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.touchableOpacity, { marginTop: 20 }]}
-          onPress={navigateToSearch}
+          onPress={navigateToNotification}
         >
-          <Text style={styles.touchableOpacityText}> Search </Text>
+          <Text style={styles.touchableOpacityText}> Notification </Text>
         </TouchableOpacity>
+
+       
       </View>
     </SafeAreaView>
   );
